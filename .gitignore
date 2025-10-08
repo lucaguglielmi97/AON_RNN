@@ -1,0 +1,14 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# TensorFlow checkpoints and training outputs
+out_tf2/
+checkpoint/
+*.ckpt
+*.h5
+
+# Temporary or local data
+.DS_Store
+*.mat~
+*.tmp
