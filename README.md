@@ -5,8 +5,7 @@
 This repository provides the TensorFlow 2 implementation of the recurrent rate-based neural network described in  
 *Selective perturbation of mirror and non-mirror neurons in an in silico model of the Action Observation Network* (Guglielmi et al.).
 
-The model reproduces the dynamics of the Action Observation Network using a continuous-time rate RNN with Dale's principle,  
-task-specific input patterns, and neuron-wise adaptive time constants.
+The model reproduces the dynamics of the Action Observation Network for both execution and observation of a Go/No-Go reaching grasp using a continuous-time rate RNN with Dale's principle, task-specific input patterns, and neuron-wise adaptive time constants.
 
 ---
 
