@@ -2,10 +2,14 @@
 
 **Guglielmi et al.**
 
-This repository provides the TensorFlow 2 implementation of the recurrent rate-based neural network described in  
-*Selective perturbation of mirror and non-mirror neurons in an in silico model of the Action Observation Network* (Guglielmi et al.).
+This repository contains the TensorFlow 2 implementation of the recurrent rate-based neural network model described in
+*Selective perturbation of mirror and non-mirror neurons in an in silico model of the Action Observation Network* (Guglielmi et al., 2025).
 
-The model reproduces the dynamics of the Action Observation Network for both execution and observation of a Go/No-Go reaching grasp using a continuous-time rate RNN with Dale's principle, task-specific input patterns, and neuron-wise adaptive time constants.
+The model was developed to reproduce and extend the neurophysiological findings of Ferroni et al. (2021, Current Biology 31, 2819–2830.e4) by training biologically constrained recurrent neural networks (RNNs) to match single-neuron firing patterns across three key nodes of the macaque Action Observation Network (AIP, F5, and F6).
+This framework enables in silico causal perturbations of specific neuronal populations (mirror vs. non-mirror; excitatory vs. inhibitory) that are currently not experimentally accessible in vivo.
+
+The experimental dataset used for model training and validation is publicly available in:
+Tili et al. (2025), “Mirror neurons in monkey frontal and parietal areas”, Scientific Data, DOI: 10.1038/s41597-025-05299-9.
 
 ---
 
@@ -13,16 +17,16 @@ The model reproduces the dynamics of the Action Observation Network for both exe
 
 - Continuous-time rate-based RNN implemented in TensorFlow 2  
 - Gradient clipping and early stopping  
-- Separate inhibitory/excitatory structure loaded from `.mat` masks  
+- Separate inhibitory/excitatory structure loaded from `InhibitoryMask.mat` mask
 - Requires experimental firing rates (`Firing_Rates.mat`) for supervision  
-- Requires neuron identity file (`Mirror.mat`) containing mirror / non-mirror labels
+- Neuron identity file (`Mirror.mat`) containing mirror / non-mirror labels
 
 ---
 
 ## 🧩 Requirements
 
 - Python ≥ 3.9  
-- TensorFlow ≥ 2.12  
+- TensorFlow ≥ 2  
 - NumPy, SciPy, Matplotlib (optional)
 
 ---
